@@ -2,12 +2,12 @@
 let gameScene = new Phaser.Scene('Game');
 // our game's configuration
 let config = {
-    // ...
+
     parent: divId,
 
-    // Game size
-    width: 1024,
-    height: 768,
+
+    width: window.innerWidth,
+    height: window.innerHeight,
 
     scale: {
         // Or set parent divId here
