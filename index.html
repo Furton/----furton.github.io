@@ -133,14 +133,14 @@
                     bridge.game.on('visibility_state_changed', state => sendMessageToUnity('OnVisibilityStateChanged', state))
 
                     let unityLoader = document.createElement('script')
-                    unityLoader.src = 'Build/FhaffShooterVK.loader.js'
+                    unityLoader.src = 'Build/FhaffVK.loader.js'
                     unityLoader.onload = () => {
                         createUnityInstance(
                             canvas,
                             {
-                                dataUrl: 'Build/FhaffShooterVK.data.unityweb',
-                                frameworkUrl: 'Build/FhaffShooterVK.framework.js.unityweb',
-                                codeUrl: 'Build/FhaffShooterVK.wasm.unityweb',
+                                dataUrl: 'Build/FhaffVK.data.unityweb',
+                                frameworkUrl: 'Build/FhaffVK.framework.js.unityweb',
+                                codeUrl: 'Build/FhaffVK.wasm.unityweb',
                                 streamingAssetsUrl: 'StreamingAssets',
                                 companyName: 'DefaultCompany',
                                 productName: 'My project',
@@ -171,11 +171,6 @@
             window.getPlatformLanguage = function() {
                 return bridge.platform.language
             }
-
-            window.getPlatformDomen = function () {
-                return bridge.platform.sdk.environment.i18n.tld
-            }
-
 
             window.getPlatformPayload = function() {
                 let payload = bridge.platform.payload
